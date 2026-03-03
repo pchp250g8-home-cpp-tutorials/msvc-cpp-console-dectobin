@@ -4,3 +4,4 @@ The program does the following:
 Developed in the Microsoft Visual Studio integrated environment.
 
 DecToBin. Занятия по C++. ИС Visual Studio. Простой Ввод/Вывод. Алгоритмы. Строки. Платформа Windows. Консольное приложение. Консольное приложение написанное на языке программирования C++. Программа делает следующее:
+Разработано в нитегрированной среде Microsoft Visual Studio.
