@@ -6,11 +6,12 @@
 
 int main(int argc, char* argv[])
 {
-    int uDecNum,uTempVal;
+    const unsigned int MAX_INT = _UI32_MAX;
+    long uDecNum,uTempVal;
     std::string strBinNum;
     std::cout << "Input an unsigned integer number\r\n";
     std::cin >> uDecNum;
-    if (uDecNum < 0)
+    if (uDecNum < 0 or uDecNum > MAX_INT)
     {
         std::cout << "Inorrect number format\r\n";
         std::cin.ignore();
@@ -25,7 +26,7 @@ int main(int argc, char* argv[])
         uTempVal /= 2;
     }
     if (strBinNum.empty()) strBinNum = "0";
-    std::cout << "The binary equivalent of the number " << uDecNum << " is:"
+    std::cout << "The binary equivalent of the decimal number " << uDecNum << " is:"
         << strBinNum << "\r\n";
     std::cin.ignore();
     std::cin.get();
