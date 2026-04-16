@@ -6,7 +6,7 @@
 
 int main(int argc, char* argv[])
 {
-    long uDecNum,uTempVal;
+    long long uDecNum,uTempVal;
     std::string strBinNum;
     std::cout << "Input an unsigned integer number\r\n";
     std::cin >> uDecNum;
@@ -20,13 +20,14 @@ int main(int argc, char* argv[])
     uTempVal = uDecNum;
     while (uTempVal > 0)
     {
-        char chDighit = static_cast<char>((uTempVal % 2) + '0');
-        strBinNum = chDighit + strBinNum;
+        long long nBinDigit = uTempVal % 2;
+        char chBinDighit = static_cast<char>(nBinDigit + '0');
+        strBinNum = chBinDighit + strBinNum;
         uTempVal /= 2;
     }
     if (strBinNum.empty()) strBinNum = "0";
     std::cout << "The binary equivalent of the decimal number " << uDecNum << " is:"
-        << strBinNum << "\r\n";
+              << strBinNum << "\r\n";
     std::cin.ignore();
     std::cin.get();
     return 0;
